@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Desarrollo_de_software_II
+namespace Practica_III
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Desarrollo_de_software_II
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }

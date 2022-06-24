@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitasHospital", "CitasHospi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salario neto", "Salario neto\Salario neto.csproj", "{BECD0D76-D426-404C-81AB-826AF91977A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica III", "Practica III\Practica III.csproj", "{AF411117-4058-465B-BA41-FD3A800609E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BECD0D76-D426-404C-81AB-826AF91977A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BECD0D76-D426-404C-81AB-826AF91977A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BECD0D76-D426-404C-81AB-826AF91977A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF411117-4058-465B-BA41-FD3A800609E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF411117-4058-465B-BA41-FD3A800609E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF411117-4058-465B-BA41-FD3A800609E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF411117-4058-465B-BA41-FD3A800609E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

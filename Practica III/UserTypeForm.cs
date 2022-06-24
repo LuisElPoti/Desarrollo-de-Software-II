@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Desarrollo_de_software_II
+namespace Practica_III
 {
-    public partial class Form1 : Form
+    public partial class UserTypeForm : Form
     {
-        public Form1()
+        public UserTypeForm()
         {
             InitializeComponent();
         }
+
     }
 }

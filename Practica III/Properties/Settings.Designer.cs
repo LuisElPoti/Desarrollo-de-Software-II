@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Desarrollo_de_software_II.Properties
+namespace Practica_III.Properties
 {
 
 
