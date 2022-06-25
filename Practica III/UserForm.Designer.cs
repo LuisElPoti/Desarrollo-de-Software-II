@@ -41,7 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.sgvRecords = new System.Windows.Forms.DataGridView();
+            this.dgvRecords = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.gbPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sgvRecords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.SuspendLayout();
             // 
             // gbPanel
@@ -191,13 +191,13 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "ID:";
             // 
-            // sgvRecords
+            // dgvRecords
             // 
-            this.sgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sgvRecords.Location = new System.Drawing.Point(271, 49);
-            this.sgvRecords.Name = "sgvRecords";
-            this.sgvRecords.Size = new System.Drawing.Size(629, 341);
-            this.sgvRecords.TabIndex = 1;
+            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecords.Location = new System.Drawing.Point(271, 49);
+            this.dgvRecords.Name = "dgvRecords";
+            this.dgvRecords.Size = new System.Drawing.Size(629, 341);
+            this.dgvRecords.TabIndex = 1;
             // 
             // label7
             // 
@@ -298,14 +298,14 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.sgvRecords);
+            this.Controls.Add(this.dgvRecords);
             this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.gbPanel);
             this.Name = "UserForm";
             this.Text = "UserForm";
             this.gbPanel.ResumeLayout(false);
             this.gbPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sgvRecords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,7 +325,7 @@
         private System.Windows.Forms.CheckBox chkEnabled;
         private System.Windows.Forms.TextBox txtCreatedDate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView sgvRecords;
+        private System.Windows.Forms.DataGridView dgvRecords;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbFilter;

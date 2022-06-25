@@ -33,7 +33,9 @@ namespace Practica_III
 
         private void userTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var oForm = new UserTypeForm();
+            oForm.MdiParent = this;
+            oForm.Show();
         }
 
         private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)

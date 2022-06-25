@@ -35,7 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.sgvRecords = new System.Windows.Forms.DataGridView();
+            this.dgvRecords = new System.Windows.Forms.DataGridView();
             this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.gbPanel = new System.Windows.Forms.GroupBox();
             this.txtCreatedDate = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.sgvRecords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.gbPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,7 @@
             this.btnCancel.TabIndex = 24;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnNew
             // 
@@ -71,6 +72,7 @@
             this.btnNew.TabIndex = 25;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnSave
             // 
@@ -82,6 +84,7 @@
             this.btnSave.TabIndex = 23;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label8
             // 
@@ -120,13 +123,13 @@
             this.label7.TabIndex = 28;
             this.label7.Text = "Filter:";
             // 
-            // sgvRecords
+            // dgvRecords
             // 
-            this.sgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sgvRecords.Location = new System.Drawing.Point(269, 48);
-            this.sgvRecords.Name = "sgvRecords";
-            this.sgvRecords.Size = new System.Drawing.Size(537, 248);
-            this.sgvRecords.TabIndex = 22;
+            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecords.Location = new System.Drawing.Point(269, 48);
+            this.dgvRecords.Name = "dgvRecords";
+            this.dgvRecords.Size = new System.Drawing.Size(537, 248);
+            this.dgvRecords.TabIndex = 22;
             // 
             // cmbFilter
             // 
@@ -253,12 +256,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.sgvRecords);
+            this.Controls.Add(this.dgvRecords);
             this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.gbPanel);
             this.Name = "UserTypeForm";
             this.Text = "UserTypeForm";
-            ((System.ComponentModel.ISupportInitialize)(this.sgvRecords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
             this.gbPanel.ResumeLayout(false);
             this.gbPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -275,7 +278,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView sgvRecords;
+        private System.Windows.Forms.DataGridView dgvRecords;
         private System.Windows.Forms.ComboBox cmbFilter;
         private System.Windows.Forms.GroupBox gbPanel;
         private System.Windows.Forms.TextBox txtCreatedDate;
