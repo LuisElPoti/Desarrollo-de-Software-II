@@ -52,5 +52,41 @@ namespace Practica_III
         {
             LayoutMdi(MdiLayout.TileVertical);
         }
+
+        private void newPatientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            var oForm = new PatientForm();
+            oForm.MdiParent = this;
+            oForm.Show();
+        }
+
+        private void maritalStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var oForm = new MaritalStatuForm();
+            oForm.MdiParent = this;
+            oForm.Show();
+        }
+
+        private void professionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var oForm = new ProfessionForm();
+            oForm.MdiParent = this;
+            oForm.Show();
+        }
+
+        private void provincesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var oForm = new ProvinceForm();
+            oForm.MdiParent = this;
+            oForm.Show();
+        }
+
+        private void municipalitysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var oForm = new MunicipalityForm();
+            oForm.MdiParent = this;
+            oForm.Show();
+        }
     }
 }

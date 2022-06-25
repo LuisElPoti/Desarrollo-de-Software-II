@@ -61,10 +61,44 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaritalStatuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaritalStatuForm.Designer.cs">
+      <DependentUpon>MaritalStatuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MaritalStatu.cs" />
+    <Compile Include="Models\Municipality.cs" />
+    <Compile Include="Models\Profession.cs" />
+    <Compile Include="Models\Province.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserType.cs" />
+    <Compile Include="MunicipalityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MunicipalityForm.Designer.cs">
+      <DependentUpon>MunicipalityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessionForm.Designer.cs">
+      <DependentUpon>ProfessionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvinceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvinceForm.Designer.cs">
+      <DependentUpon>ProvinceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +117,18 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MaritalStatuForm.resx">
+      <DependentUpon>MaritalStatuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MunicipalityForm.resx">
+      <DependentUpon>MunicipalityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessionForm.resx">
+      <DependentUpon>ProfessionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProvinceForm.resx">
+      <DependentUpon>ProvinceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>

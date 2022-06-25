@@ -64,13 +64,20 @@
             this.userTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblMsg = new System.Windows.Forms.ToolStripStatusLabel();
-            this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.citasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newPatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maritalStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.professionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provincesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.municipalitysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -327,7 +334,12 @@
             // maintenanceToolStripMenuItem
             // 
             this.maintenanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userTypeToolStripMenuItem});
+            this.userTypeToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.maritalStatusToolStripMenuItem,
+            this.professionToolStripMenuItem,
+            this.provincesToolStripMenuItem,
+            this.municipalitysToolStripMenuItem});
             this.maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
             this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.maintenanceToolStripMenuItem.Text = "Maintenance";
@@ -350,6 +362,15 @@
             this.userManagementToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.userManagementToolStripMenuItem.Text = "Users";
             this.userManagementToolStripMenuItem.Click += new System.EventHandler(this.userManagementToolStripMenuItem_Click);
+            // 
+            // patientsToolStripMenuItem
+            // 
+            this.patientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newPatientsToolStripMenuItem,
+            this.citasToolStripMenuItem});
+            this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
+            this.patientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.patientsToolStripMenuItem.Text = "Patients";
             // 
             // windowsToolStripMenuItem
             // 
@@ -396,11 +417,52 @@
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.Size = new System.Drawing.Size(0, 17);
             // 
-            // patientsToolStripMenuItem
+            // citasToolStripMenuItem
             // 
-            this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
-            this.patientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.patientsToolStripMenuItem.Text = "Patients";
+            this.citasToolStripMenuItem.Enabled = false;
+            this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.citasToolStripMenuItem.Text = "Date";
+            // 
+            // newPatientsToolStripMenuItem
+            // 
+            this.newPatientsToolStripMenuItem.Name = "newPatientsToolStripMenuItem";
+            this.newPatientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newPatientsToolStripMenuItem.Text = "New patients";
+            this.newPatientsToolStripMenuItem.Click += new System.EventHandler(this.newPatientsToolStripMenuItem_Click);
+            // 
+            // maritalStatusToolStripMenuItem
+            // 
+            this.maritalStatusToolStripMenuItem.Name = "maritalStatusToolStripMenuItem";
+            this.maritalStatusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maritalStatusToolStripMenuItem.Text = "Marital Status";
+            this.maritalStatusToolStripMenuItem.Click += new System.EventHandler(this.maritalStatusToolStripMenuItem_Click);
+            // 
+            // professionToolStripMenuItem
+            // 
+            this.professionToolStripMenuItem.Name = "professionToolStripMenuItem";
+            this.professionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.professionToolStripMenuItem.Text = "Professions";
+            this.professionToolStripMenuItem.Click += new System.EventHandler(this.professionToolStripMenuItem_Click);
+            // 
+            // provincesToolStripMenuItem
+            // 
+            this.provincesToolStripMenuItem.Name = "provincesToolStripMenuItem";
+            this.provincesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.provincesToolStripMenuItem.Text = "Provinces";
+            this.provincesToolStripMenuItem.Click += new System.EventHandler(this.provincesToolStripMenuItem_Click);
+            // 
+            // municipalitysToolStripMenuItem
+            // 
+            this.municipalitysToolStripMenuItem.Name = "municipalitysToolStripMenuItem";
+            this.municipalitysToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.municipalitysToolStripMenuItem.Text = "Municipalities";
+            this.municipalitysToolStripMenuItem.Click += new System.EventHandler(this.municipalitysToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
             // 
             // MainForm
             // 
@@ -469,5 +531,12 @@
         private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem patientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newPatientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem citasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem maritalStatusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem professionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem provincesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem municipalitysToolStripMenuItem;
     }
 }

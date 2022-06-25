@@ -1,6 +1,6 @@
 ﻿namespace Practica_III
 {
-    partial class UserTypeForm
+    partial class MaritalStatuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -55,10 +55,10 @@
             // 
             this.btnCancel.Enabled = false;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(97, 273);
+            this.btnCancel.Location = new System.Drawing.Point(98, 272);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 24;
+            this.btnCancel.TabIndex = 34;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -66,10 +66,10 @@
             // btnNew
             // 
             this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(187, 273);
+            this.btnNew.Location = new System.Drawing.Point(188, 272);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 25;
+            this.btnNew.TabIndex = 35;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
@@ -78,10 +78,10 @@
             // 
             this.btnSave.Enabled = false;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(6, 273);
+            this.btnSave.Location = new System.Drawing.Point(7, 272);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 23;
+            this.btnSave.TabIndex = 33;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -90,47 +90,47 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(533, 14);
+            this.label8.Location = new System.Drawing.Point(534, 13);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 13);
-            this.label8.TabIndex = 30;
+            this.label8.TabIndex = 40;
             this.label8.Text = "Filter:";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(731, 9);
+            this.button1.Location = new System.Drawing.Point(732, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
+            this.button1.TabIndex = 36;
             this.button1.Text = "Filter";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // txtFilter
             // 
-            this.txtFilter.Location = new System.Drawing.Point(578, 10);
+            this.txtFilter.Location = new System.Drawing.Point(579, 9);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(147, 20);
-            this.txtFilter.TabIndex = 29;
+            this.txtFilter.TabIndex = 39;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(266, 14);
+            this.label7.Location = new System.Drawing.Point(267, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
-            this.label7.TabIndex = 28;
+            this.label7.TabIndex = 38;
             this.label7.Text = "Filter:";
             // 
             // dgvRecords
             // 
             this.dgvRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecords.Location = new System.Drawing.Point(269, 48);
+            this.dgvRecords.Location = new System.Drawing.Point(270, 47);
             this.dgvRecords.Name = "dgvRecords";
             this.dgvRecords.Size = new System.Drawing.Size(537, 248);
-            this.dgvRecords.TabIndex = 22;
+            this.dgvRecords.TabIndex = 32;
             // 
             // cmbFilter
             // 
@@ -142,10 +142,10 @@
             "Name",
             "User Type",
             "Created Date"});
-            this.cmbFilter.Location = new System.Drawing.Point(311, 11);
+            this.cmbFilter.Location = new System.Drawing.Point(312, 10);
             this.cmbFilter.Name = "cmbFilter";
             this.cmbFilter.Size = new System.Drawing.Size(192, 21);
-            this.cmbFilter.TabIndex = 27;
+            this.cmbFilter.TabIndex = 37;
             // 
             // gbPanel
             // 
@@ -159,12 +159,12 @@
             this.gbPanel.Controls.Add(this.txtId);
             this.gbPanel.Controls.Add(this.label1);
             this.gbPanel.Enabled = false;
-            this.gbPanel.Location = new System.Drawing.Point(0, 1);
+            this.gbPanel.Location = new System.Drawing.Point(1, 0);
             this.gbPanel.Name = "gbPanel";
             this.gbPanel.Size = new System.Drawing.Size(262, 257);
-            this.gbPanel.TabIndex = 21;
+            this.gbPanel.TabIndex = 31;
             this.gbPanel.TabStop = false;
-            this.gbPanel.Text = "USER MANAGEMENT";
+            this.gbPanel.Text = "MARITAL STATUS MANAGEMENT";
             // 
             // txtCreatedDate
             // 
@@ -224,9 +224,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(5, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Name:";
+            this.label2.Text = "Status:";
             // 
             // txtId
             // 
@@ -245,7 +245,7 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "ID:";
             // 
-            // UserTypeForm
+            // MaritalStatuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,8 +260,8 @@
             this.Controls.Add(this.dgvRecords);
             this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.gbPanel);
-            this.Name = "UserTypeForm";
-            this.Text = "UserTypeForm";
+            this.Name = "MaritalStatuForm";
+            this.Text = "MaritalStatusForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
             this.gbPanel.ResumeLayout(false);
             this.gbPanel.PerformLayout();
