@@ -19,6 +19,7 @@ namespace Practica_III
         public ProvinceForm()
         {
             InitializeComponent();
+            GetRecords();
         }
         private void GetRecords()
         {
@@ -120,6 +121,123 @@ namespace Practica_III
         private void btnCancel_Click(object sender, EventArgs e)
         {
             ClearFields();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvRecords.SelectedRows.Count == 1) //Si hay una fila seleccionada
+            {
+
+
+                if (MessageBox.Show("¿Realmente desea eliminar la provincia?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    var json = string.Empty;
+                    var provinces = new List<Province>();
+                    var pathFile = $"{AppDomain.CurrentDomain.BaseDirectory}\\provinces.json";
+
+                    if (File.Exists(pathFile))
+                    {
+                        json = File.ReadAllText(pathFile, Encoding.UTF8);
+                        provinces = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Province>>(json);
+                    }
+
+                    var Id = int.Parse(txtId.Text); //Obtenemos el id de la provincia a modificar
+
+                    var province = new Province();
+
+                    province = provinces.FirstOrDefault(x => x.Id == Id);
+
+                    if (province != null)
+                    {
+                        provinces.Remove(province);
+   
+                    }
+                    
+
+                    json = Newtonsoft.Json.JsonConvert.SerializeObject(provinces);
+
+                    var sw = new StreamWriter(pathFile, false, Encoding.UTF8);
+                    sw.WriteLine(json);
+                    sw.Close();
+
+                    MessageBox.Show("Eliminación exitosa", "Patient Manage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ClearFields();
+                    GetRecords();
+
+                }
+            }
+            else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            gbPanel.Enabled = false;
+
+        }
+    
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (dgvRecords.SelectedRows.Count == 1) //Si hay una fila seleccionada
+            {
+                
+
+                if (MessageBox.Show("¿Desea actualizar el registro?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    var json = string.Empty;
+                    var provinces = new List<Province>();
+                    var pathFile = $"{AppDomain.CurrentDomain.BaseDirectory}\\provinces.json";
+
+                    if (File.Exists(pathFile))
+                    {
+                        json = File.ReadAllText(pathFile, Encoding.UTF8);
+                        provinces = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Province>>(json);
+                    }
+
+                    var Id = int.Parse(txtId.Text); //Obtenemos el id de la provincia a modificar
+
+                    var province = new Province();
+
+                    province = provinces.FirstOrDefault(x => x.Id == Id);
+                    if (province != null)
+                    {
+                        provinces.Remove(province);
+                        province.Name = txtName.Text;
+                        province.Description = txtDescription.Text;
+
+
+                    }
+                    provinces.Add(province);
+
+                    json = Newtonsoft.Json.JsonConvert.SerializeObject(provinces);
+
+                    var sw = new StreamWriter(pathFile, false, Encoding.UTF8);
+                    sw.WriteLine(json);
+                    sw.Close();
+
+                    MessageBox.Show("Registro exitoso", "Patient Manage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ClearFields();
+                    GetRecords();
+                    
+                }
+            }
+            else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            gbPanel.Enabled = false;
+
+        }
+
+        private void dgvRecords_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dgv = dgvRecords.Rows[e.RowIndex];//Obtenemos la fila que se encuentra seleccionada
+
+            //Cargamos cada campo del registro con su respectivo campo del formulario
+
+            txtId.Text = dgv.Cells[0].Value.ToString();
+            txtName.Text = dgv.Cells[1].Value.ToString();
+            txtDescription.Text = dgv.Cells[2].Value.ToString();
+            txtCreatedDate.Text = dgv.Cells[3].Value.ToString();
+
+            gbPanel.Enabled = true;
         }
     }
 }

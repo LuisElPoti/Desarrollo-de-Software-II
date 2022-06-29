@@ -34,9 +34,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.dgvRecords = new System.Windows.Forms.DataGridView();
-            this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.gbPanel = new System.Windows.Forms.GroupBox();
             this.txtCreatedDate = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.gbPanel.SuspendLayout();
             this.SuspendLayout();
@@ -112,16 +112,6 @@
             this.txtFilter.Size = new System.Drawing.Size(147, 20);
             this.txtFilter.TabIndex = 49;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(267, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 13);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Filter:";
-            // 
             // dgvRecords
             // 
             this.dgvRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -130,21 +120,7 @@
             this.dgvRecords.Name = "dgvRecords";
             this.dgvRecords.Size = new System.Drawing.Size(537, 248);
             this.dgvRecords.TabIndex = 42;
-            // 
-            // cmbFilter
-            // 
-            this.cmbFilter.FormattingEnabled = true;
-            this.cmbFilter.Items.AddRange(new object[] {
-            ".... All....",
-            "Id",
-            "User",
-            "Name",
-            "User Type",
-            "Created Date"});
-            this.cmbFilter.Location = new System.Drawing.Point(312, 11);
-            this.cmbFilter.Name = "cmbFilter";
-            this.cmbFilter.Size = new System.Drawing.Size(192, 21);
-            this.cmbFilter.TabIndex = 47;
+            this.dgvRecords.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecords_CellClick);
             // 
             // gbPanel
             // 
@@ -162,7 +138,7 @@
             this.gbPanel.Size = new System.Drawing.Size(262, 257);
             this.gbPanel.TabIndex = 41;
             this.gbPanel.TabStop = false;
-            this.gbPanel.Text = "MARITAL STATUS MANAGEMENT";
+            this.gbPanel.Text = "PROVINCES MANAGEMENT";
             // 
             // txtCreatedDate
             // 
@@ -187,7 +163,6 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(194, 20);
             this.txtDescription.TabIndex = 11;
-            this.txtDescription.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -233,20 +208,42 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "ID:";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(287, 14);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 51;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnModify
+            // 
+            this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModify.Location = new System.Drawing.Point(382, 14);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(75, 23);
+            this.btnModify.TabIndex = 52;
+            this.btnModify.Text = "Modify";
+            this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+            // 
             // ProvinceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 297);
+            this.Controls.Add(this.btnModify);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtFilter);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvRecords);
-            this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.gbPanel);
             this.Name = "ProvinceForm";
             this.Text = "ProvinceForm";
@@ -266,9 +263,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtFilter;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvRecords;
-        private System.Windows.Forms.ComboBox cmbFilter;
         private System.Windows.Forms.GroupBox gbPanel;
         private System.Windows.Forms.TextBox txtCreatedDate;
         private System.Windows.Forms.Label label6;
@@ -278,5 +273,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnModify;
     }
 }
