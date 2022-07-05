@@ -38,7 +38,7 @@ namespace SuperCarros.Controllers
         // GET: Categories/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new Product());
         }
 
         // POST: Categories/Create
