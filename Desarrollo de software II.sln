@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salario neto", "Salario net
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica III", "Practica III\Practica III.csproj", "{AF411117-4058-465B-BA41-FD3A800609E4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ejercicios Web", "Ejercicios Web", "{C7074119-398E-4681-B38A-B27354D7FF1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET CORE", ".NET CORE", "{FC1A2DA1-E760-44D3-9D1D-108979545231}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET FRAMEWORK", ".NET FRAMEWORK", "{2FDE8A95-5198-4E7A-8CF3-843A98A68DAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperCarros", "SuperCarros\SuperCarros.csproj", "{043814D8-636B-4763-BB8B-C06D5AFECFF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +35,18 @@ Global
 		{AF411117-4058-465B-BA41-FD3A800609E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF411117-4058-465B-BA41-FD3A800609E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF411117-4058-465B-BA41-FD3A800609E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043814D8-636B-4763-BB8B-C06D5AFECFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043814D8-636B-4763-BB8B-C06D5AFECFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043814D8-636B-4763-BB8B-C06D5AFECFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043814D8-636B-4763-BB8B-C06D5AFECFF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC1A2DA1-E760-44D3-9D1D-108979545231} = {C7074119-398E-4681-B38A-B27354D7FF1C}
+		{2FDE8A95-5198-4E7A-8CF3-843A98A68DAD} = {C7074119-398E-4681-B38A-B27354D7FF1C}
+		{043814D8-636B-4763-BB8B-C06D5AFECFF1} = {2FDE8A95-5198-4E7A-8CF3-843A98A68DAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7797838B-43C9-4EDD-9C3C-D57B478F1673}
