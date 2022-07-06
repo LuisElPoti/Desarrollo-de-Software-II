@@ -79,7 +79,7 @@ namespace SuperCarros.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Description,Enabled,PhoneNumber,Email,WebSite")] Supplier supplier)
+        public ActionResult Edit([Bind(Include = "Id,Name,Description,Enabled,PhoneNumber,Email,WebSite,CreatedDate")] Supplier supplier)
         {
             if (ModelState.IsValid)
             {

@@ -34,7 +34,7 @@ namespace SuperCarros
         public string Fuel { get; set; }
         public string Transmission { get; set; }
         public string Traction { get; set; }
-        public int Door { get; set; }
+        public Nullable<int> Door { get; set; }
         public Nullable<int> Passenger { get; set; }
         public Nullable<int> Year { get; set; }
         public string Status { get; set; }

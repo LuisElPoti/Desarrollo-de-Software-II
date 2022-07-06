@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -17,7 +18,12 @@ namespace SuperCarros.Controllers
         // GET: Products
         public ActionResult Index()
         {
-            var products = db.Products.Include(p => p.Category).Include(p => p.Mark).Include(p => p.Supplier);
+            var products = db.Products.Include(p => p.Category).Include(p => p.Mark).Include(p => p.Supplier).OrderByDescending(x=> x.CreatedDate);
+            return View(products.ToList());
+        }
+        public ActionResult Test()
+        {
+            var products = db.Products.Include(p => p.Category).Include(p => p.Mark).Include(p => p.Supplier).OrderByDescending(x => x.CreatedDate);
             return View(products.ToList());
         }
 
@@ -27,6 +33,7 @@ namespace SuperCarros.Controllers
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                
             }
             Product product = db.Products.Find(id);
             if (product == null)
@@ -43,7 +50,7 @@ namespace SuperCarros.Controllers
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name");
             ViewBag.MarkId = new SelectList(db.Marks, "Id", "Name");
             ViewBag.SupplierId = new SelectList(db.Suppliers, "Id", "Name");
-            return View();
+            return View(new Product());
         }
 
         // POST: Products/Create
@@ -51,14 +58,25 @@ namespace SuperCarros.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Code,Name,ListPrice,Description,MarkId,CategoryId,Picture,Engine,ColorInside,ColorOutside,Fuel,Transmission,Traction,Door,Passenger,Year,Status,SupplierId,Mileage")] Product product)
+        public ActionResult Create([Bind(Include = "Code,Name,ListPrice,Description,MarkId,CategoryId,Picture,Engine,ColorInside,ColorOutside,Fuel,Transmission,Traction,Door,Passenger,Year,Status,SupplierId,Mileage")] Product product, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
                 product.Id = Guid.NewGuid().ToString();
                 product.CreatedDate = DateTime.Now;
+
+                if(file != null)
+                {
+                    string pictureUrl = System.IO.Path.GetFileName(file.FileName);
+                    string pathUrl = System.IO.Path.Combine(Server.MapPath("/Content/image"), pictureUrl);
+
+                    file.SaveAs(pathUrl);
+
+                    product.Picture = pictureUrl;
+                }
                 db.Products.Add(product);
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 
@@ -66,6 +84,7 @@ namespace SuperCarros.Controllers
             ViewBag.MarkId = new SelectList(db.Marks, "Id", "Name", product.MarkId);
             ViewBag.SupplierId = new SelectList(db.Suppliers, "Id", "Name", product.SupplierId);
             return View(product);
+            
         }
 
         // GET: Products/Edit/5
@@ -95,6 +114,8 @@ namespace SuperCarros.Controllers
         {
             if (ModelState.IsValid)
             {
+                product.CreatedDate = DateTime.Now;
+                
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

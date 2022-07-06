@@ -38,7 +38,7 @@ namespace SuperCarros.Controllers
         // GET: Categories/Create
         public ActionResult Create()
         {
-            return View(new Product());
+            return View(new Category());
         }
 
         // POST: Categories/Create
@@ -79,7 +79,7 @@ namespace SuperCarros.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Description,Enabled")] Category category)
+        public ActionResult Edit([Bind(Include = "Id,Name,Description,Enabled,CreatedDate")] Category category)
         {
             if (ModelState.IsValid)
             {
