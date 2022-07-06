@@ -5,6 +5,8 @@
  */
 /*! normalize.
     v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5033,15 +5035,24 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  color: inherit;
-  background-color: #eeeeee;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eeeeee;
+    background-image: url('https://fondosmil.com/fondo/21993.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
+.jumbotron1 {
+    color: azure;
+}
+
 .jumbotron h1,
 .jumbotron .h1 {
-  color: inherit;
+  color: azure;
 }
 .jumbotron p {
   margin-bottom: 15px;
